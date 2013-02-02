@@ -1,2 +1,3 @@
 /public
 *.sh
+.DS_Store
