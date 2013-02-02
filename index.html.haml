@@ -1,0 +1,33 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title Mobilize
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    %link{:href => "css/boot.css", :rel => "stylesheet"}
+    %link{:href => "css/boot-responsive.css", :rel => "stylesheet"}
+    %link{:href => "css/boot-extend.css", :rel => "stylesheet"}
+    %link{:href => "css/app.css", :rel => "stylesheet"}
+  %body
+    = render 'views/navigation.html.haml'
+    = render 'views/caro.html.haml'
+    = render 'views/pricing.html.haml'
+    = render 'views/marketing/agents.html.haml'
+    = render 'views/marketing/processes.html.haml'
+    = render 'views/marketing/office.html.haml'
+    /= render '_feature.html.haml'
+    %script{:src => 'http://code.jquery.com/jquery-latest.min.js'}
+    %script{:src => "js/boot.js"}
+    :javascript
+      !function($){
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel();
+          $('a[rel=tooltip]').tooltip();
+          $('a[rel=tooltip]').click(function (e) {
+            e.preventDefault();
+          })
+        })
+      }(window.jQuery)
