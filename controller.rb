@@ -1,4 +1,8 @@
-ignore /\/views/
+ignore /\/views/, 
+      "Gemfile", "Gemfile.lock", 
+      /\.bundle/, /\/bin/, /\.gitignore/, 
+      /\.ruby-version/,
+      "upload.sh", "README.md"
 
 helpers do
   def request_quote

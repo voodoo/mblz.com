@@ -10,16 +10,27 @@
     %link{:href => "css/boot-responsive.css", :rel => "stylesheet"}
     %link{:href => "css/boot-extend.css", :rel => "stylesheet"}
     %link{:href => "css/app.css", :rel => "stylesheet"}
+    %link{:href => "css/totop.css", :rel => "stylesheet"}
   %body
     = render 'views/navigation.html.haml'
     = render 'views/caro.html.haml'
-    = render 'views/pricing.html.haml'
     = render 'views/marketing/agents.html.haml'
+    = render 'views/features/clients.html.haml'
     = render 'views/marketing/processes.html.haml'
+    = render 'views/features/invoices.html.haml'
     = render 'views/marketing/office.html.haml'
-    /= render '_feature.html.haml'
+    = render 'views/pricing.html.haml'
+    
+    %footer(style="text-align:right;margin-top:12px")
+      %p
+        \&copy; 2013-2014 Integrated Internet, LLC. &middot;
+        / %a{:href => "#"} Privacy
+        / \&middot;
+        / %a{:href => "#"} Terms    
     %script{:src => 'http://code.jquery.com/jquery-latest.min.js'}
     %script{:src => "js/boot.js"}
+    %script{:src => "js/easing.js"}
+    %script{:src => "js/jquery.totop.js"}
     :javascript
       !function($){
         $(function(){
@@ -29,5 +40,6 @@
           $('a[rel=tooltip]').click(function (e) {
             e.preventDefault();
           })
+          $().UItoTop({ easingType: 'easeOutQuart' });
         })
       }(window.jQuery)

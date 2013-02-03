@@ -12,13 +12,17 @@
         / Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
         .nav-collapse.collapse
           %ul.nav
-            %li.active
+            %li
+              %a{:href => "#clients"} Clients          
+            %li
+              %a{:href => "#invoices"} Invoices
+            %li
               %a{:href => "#pricing"} Pricing
-            %li
-              %a{:href => "#about"} About
-            %li
-              %a{:href => "mailto:contact@mblz.com?subject=Contact&body=What can we do for you"} 
-                Contact
+            / %li
+            /   %a{:href => "#about"} About
+            / %li
+            /   %a{:href => "mailto:contact@mblz.com?subject=Contact&body=What can we do for you"} 
+            /     Contact
             %li
               %a{:href => "mailto:contact@mblz.com?subject=Request a Demo&body=Hello, I would like a demo"} 
                 Request a Demo              
